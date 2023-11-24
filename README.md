@@ -7,5 +7,14 @@
  ░▓░▓░▓░▓░▓░▓
 ♙♙♙♙♙♙♙♙
 ♖♘♗♔♕♗♘♖
+
+> ece ug | love ham radios, cryptography, and hardware tech
+> I also craft design centric digital experiences filled with cool interactions
 ```
-More about me at [rikiphukon.com](https://rikiphukon.com)
+pgp fingerprint: `C8F6 B585 06C2 C2AD 8728  D045 867C 6C51 7C92 D22D`
+
+```bash
+curl https://rikiphukon.com/pubkey.asc | gpg --import
+```
+
+<kbd>ctrl</kbd> + <kbd>click!</kbd> > [pub-key](https://rikiphukon.com/pubkey.asc)

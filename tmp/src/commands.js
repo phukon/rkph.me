@@ -17,11 +17,14 @@ var outnumbered = 'https://github.com/phukon/Outnumbered'
 var btb = 'https://github.com/phukon/Bob_the_Blobs'
 //-----------------
 
-whois = [
+about = [
   '<br>',
-  "Hey, I'm Riki Phukon!👋",
-  "I'm a software developer with a focus on design, crafting interactive <br> and engaging software like the one you're currently exploring.",
+  "Hey there, I'm Riki Phukon!👋",
+  "I'm an ECE undergrad who's all about ham radios, cryptography, and diving deep into the world of hardware geekiness.",
+ '<br>',
+"I love to craft digital experiences that are not just about design, but also filled with cool interactions and engaging software – just like the one you're diving into right now!",
   '<br>',
+  '<a href="pubkey.asc" download="public_key.asc">PGP Fingerprint: <u>C8F6 B585 06C2 C2AD 8728  D045 867C 6C51 7C92 D22D</u></a>'
 ]
 
 whoami = ['<br>', 'Idk.... do you know?', '<br>']
@@ -120,7 +123,7 @@ help = [
   '<br>',
   '↘ Available commands',
   '<br>',
-  '<span class="command">whois</span>          "Riki" who??',
+  '<span class="command">about</span>          "Riki" who??',
   '<span class="command">projects</span>       View projects',
   '<span class="command">email</span>          I\'ll try to respond as fast as I can',
   '<span class="command">blog</span>           View my writeups',
@@ -149,6 +152,8 @@ banner = [
   '<span class="color2">Welcome to my interactive web terminal.</span>',
   '<span class="color2">For a list of available commands, type</span> <span class="command">\'help\'</span><span class="color2">.</span>',
   `<span class="color2">💬riki</span>`,
-  `<a href="src/pubkey.asc" download="public_key.asc">➡download my gpg key</a>`,
+  `<br>`,
+  `<a href="pubkey.asc" download="pubkey.asc">➡PGP Fingerprint: <u>C8F6 B585 06C2 C2AD 8728  D045 867C 6C51 7C92 D22D</u></a>`,
+ `<span>curl https://rikiphukon.com/pubkey.asc | gpg --import</span>`,
   '<br>',
 ]
