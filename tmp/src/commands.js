@@ -149,5 +149,6 @@ banner = [
   '<span class="color2">Welcome to my interactive web terminal.</span>',
   '<span class="color2">For a list of available commands, type</span> <span class="command">\'help\'</span><span class="color2">.</span>',
   `<span class="color2">💬riki</span>`,
+  `<a href="src/pubkey.asc" download="public_key.asc">➡download my gpg key</a>`,
   '<br>',
 ]
