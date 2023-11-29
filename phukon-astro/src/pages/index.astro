@@ -5,6 +5,9 @@ import { Link } from "../lib/Link";
 import { Paragraph } from "../lib/prose/Paragraph";
 import type { PostFrontmatter } from "../types";
 import Image from "../lib/prose/Image.astro";
+import {getProjects} from "../lib/projects"
+import Project from "../components/Project.astro";
+
 
 let posts = await Astro.glob<PostFrontmatter>("../../posts/**/*.mdx");
 
@@ -18,13 +21,15 @@ posts.sort((a, b) => {
     new Date(a.frontmatter.date).getTime()
   );
 });
+
+const projects = await getProjects()
 ---
 
 <BaseLayout title="Riki Phukon" description="personal web">
   <h1 slot="header-content" class="text-gray-600 dark:text-gray-500">
     <b>riki</b>phukon
   </h1>
-  <main class="zaduma-prose py-10">
+  <main class="zaduma-prose px-4 py-10">
     <Paragraph>
       <small class="text-gray-600 dark:text-gray-500"
         >IPA /phuːkɔːn/ • फूकौन
@@ -36,8 +41,8 @@ posts.sort((a, b) => {
       interactions.
     </Paragraph>
 
-    <div class="flex flex-row place-content-center">
-      <Image src="/collage.jpg" alt="A bird." width="500" height="500" />
+    <div class="flex flex-row place-content-center md:ml-28">
+      <Image src="/collage.jpg" alt="A bird." width={500} height={500}/>
     </div>
   </main>
   <ul>
@@ -67,15 +72,23 @@ posts.sort((a, b) => {
       })
     }
   </ul>
+  <hr/>
+  
+    <h1 class="mt-8 -mb-2">Projects</h1><br/>
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-3 text-xs">
+      {projects.map((project) => <Project {project} />)}
+    </div>
 
   <Paragraph class="mt-6">
-    <a href="pubkey.asc" download="pubkey.asc"
-      >PGP Fingerprint: <u
-        ><samp>C8F6 B585 06C2 C2AD 8728 D045 867C 6C51 7C92 D22D</samp></u
-      ></a
+    <small class="text-gray-600 dark:text-gray-500"
+      ><a href="pubkey.asc" download="pubkey.asc"
+        >PGP Fingerprint: <u
+          ><samp>C8F6 B585 06C2 C2AD 8728 D045 867C 6C51 7C92 D22D</samp></u
+        ></a
+      >
+      <br />
+      <samp>curl https://rikiphukon.com/pubkey.asc | gpg --import</samp></small
     >
-    <br />
-    <samp>curl https://rikiphukon.com/pubkey.asc | gpg --import</samp>
   </Paragraph>
   <style>
     ul:hover li:not(:hover) :where(h2, time) {

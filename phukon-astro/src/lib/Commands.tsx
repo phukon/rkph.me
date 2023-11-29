@@ -159,12 +159,12 @@ export function CommandsPalette({
         " dark:backdrop:bg-black dark:backdrop:bg-opacity-30" +
         " mx-auto transform rounded-xl bg-white" +
         " overflow-hidden shadow-2xl ring-1 ring-black ring-opacity-5" +
-        " transition-all [&[open]]:flex flex-col" +
-        " relative p-0 bg-white dark:bg-gray-900 w-96 max-w-full"
+        " flex-col transition-all [&[open]]:flex" +
+        " relative w-96 max-w-full bg-white p-0 dark:bg-gray-900"
       }
     >
       <div class="flex justify-end">
-        <DialogCloseButton class="p-2 cursor-pointer group focus:outline-none">
+        <DialogCloseButton class="group cursor-pointer p-2 focus:outline-none">
           <Kbd aria-hidden>esc</Kbd>
           <span class="sr-only">Close</span>
         </DialogCloseButton>
@@ -172,13 +172,13 @@ export function CommandsPalette({
       <CommandInput
         aria-label="Commands"
         class={
-          "p-2 indent-2 w-full focus:outline-none border-b" +
-          " dark:border-gray-700 bg-transparent"
+          "w-full border-b p-2 indent-2 focus:outline-none" +
+          " bg-transparent dark:border-gray-700"
         }
         placeholder="What do you need?"
         autofocus
       />
-      <CommandList class="p-2 overflow-scroll">
+      <CommandList class="overflow-scroll p-2">
         <Switch
           fallback={
             <>
@@ -191,13 +191,13 @@ export function CommandsPalette({
                 </CommandItem>
               </CommandGroup>
               <CommandGroup heading={<GroupHeading>Links</GroupHeading>}>
-                <CommandItem href="https://twitter.com/hasparus">
-                  Twitter
+                <CommandItem href="https://twitter.com/kungfukon">
+                  X(Twitter)
                 </CommandItem>
-                <CommandItem href="https://github.com/hasparus/zaduma">
+                <CommandItem href="https://github.com/phukon">
                   GitHub
                 </CommandItem>
-                <CommandItem href="https://github.com/hasparus/zaduma/issues">
+                <CommandItem href="mailto:hello@rikiphukon.com">
                   Contact
                 </CommandItem>
                 <CommandItem href="/rss.xml">RSS</CommandItem>
