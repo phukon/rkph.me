@@ -1,7 +1,8 @@
 # build output
 dist/
 
-posts/
+# posts
+posts/features/
 
 # dependencies
 node_modules/

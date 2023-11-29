@@ -4,6 +4,7 @@ import { formatDate } from "../lib/formatDate";
 import { Link } from "../lib/Link";
 import { Paragraph } from "../lib/prose/Paragraph";
 import type { PostFrontmatter } from "../types";
+import Image from "../lib/prose/Image.astro";
 
 let posts = await Astro.glob<PostFrontmatter>("../../posts/**/*.mdx");
 
@@ -19,36 +20,25 @@ posts.sort((a, b) => {
 });
 ---
 
-<BaseLayout
-  title="Riki Phukon"
-  description="personal web"
->
-  <h1 slot="header-content" class="text-gray-600 dark:text-gray-500"><b>riki</b>phukon</h1>
+<BaseLayout title="Riki Phukon" description="personal web">
+  <h1 slot="header-content" class="text-gray-600 dark:text-gray-500">
+    <b>riki</b>phukon
+  </h1>
   <main class="zaduma-prose py-10">
     <Paragraph>
       <small class="text-gray-600 dark:text-gray-500"
-        >IPA /phuːkɔːn/ • फूकौन </small
-      >
+        >IPA /phuːkɔːn/ • फूकौन
+      </small>
       <br />
-      <small class="text-gray-600 dark:text-gray-500"><a href="pubkey.asc" download="pubkey.asc"
-        >PGP Fingerprint: <u
-          >C8F6 B585 06C2 C2AD 8728 D045 867C 6C51 7C92 D22D</u
-        ></a
-      > <br/>
-      <samp>curl https://rikiphukon.com/pubkey.asc | gpg --import</samp></small>
-      <br/>
-       Hi there! I'm <b>Riki Phukon</b>, ece ug, and I'm all about ham
-      radios, cryptography, and diving deep into the world of hardware
-      geekiness. I also like to build design centric digital experiences filled
-      with cool interactions.
+       Hi there! I'm <b>Riki Phukon</b>, ece ug, and I'm all about ham radios,
+      cryptography, and diving deep into the world of hardware geekiness. I also
+      like to build design centric digital experiences filled with cool
+      interactions.
     </Paragraph>
-    <Paragraph class="mt-6">
-      Learn about it by reading the articles below, take a look at the
-      <Link href="https://github.com/hasparus/zaduma">readme</Link>, or boldly
-      <Link href="https://github.com/hasparus/zaduma/generate">
-        {"create a new repository"}
-      </Link>. I wish you a pleasant journey.
-    </Paragraph>
+
+    <div class="flex flex-row place-content-center">
+      <Image src="/collage.jpg" alt="A bird." width="500" height="500" />
+    </div>
   </main>
   <ul>
     {
@@ -77,6 +67,16 @@ posts.sort((a, b) => {
       })
     }
   </ul>
+
+  <Paragraph class="mt-6">
+    <a href="pubkey.asc" download="pubkey.asc"
+      >PGP Fingerprint: <u
+        ><samp>C8F6 B585 06C2 C2AD 8728 D045 867C 6C51 7C92 D22D</samp></u
+      ></a
+    >
+    <br />
+    <samp>curl https://rikiphukon.com/pubkey.asc | gpg --import</samp>
+  </Paragraph>
   <style>
     ul:hover li:not(:hover) :where(h2, time) {
       @apply text-gray-600 transition-colors;
