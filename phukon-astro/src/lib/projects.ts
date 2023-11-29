@@ -17,30 +17,30 @@ export async function getProjects(): Promise<Project[]> {
         " A live index of the best cities to live and work in India.",
     },
     {
+      repo: "Project Athena (ReactJS)",
+      link: "https://github.com/phukon/project-athena-react",
+      description: "Academic resource aggregator",
+    },
+    {
       repo: "Xongroh",
       link: "https://github.com/phukon/xongroh",
       description: "The social media designed exclusively for Creators.",
     },
     {
-      repo: "Project Athena (ReactJS)",
-      link: "https://github.com/phukon/project-athena-react",
-      description: "Academic resource aggregator",
-    },
-
-    {
-      repo: "Outnumbered(GDScript)     ",
+      repo: "Outnumbered",
       link: "https://github.com/phukon/Outnumbered",
-      description: "2D Top-down shooter game.",
+      description: "2D Top-down shooter game written in GDScript",
     },
     {
-      repo: "Bob the Blobs(GDScript)",
+      repo: "Bob the Blobs",
       link: "https://github.com/phukon/Bob_the_Blobs",
-      description: "A 2D platformer game with a parallax background.",
+      description:
+        "A 2D platformer game with a parallax background. Written in GDScript",
     },
     {
       repo: "Project Athena (vanilla)",
       link: "Github: https://github.com/phukon/project-athena",
       description: "Academic resource aggregator.",
-    }
+    },
   ];
 }

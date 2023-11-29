@@ -5,9 +5,8 @@ import { Link } from "../lib/Link";
 import { Paragraph } from "../lib/prose/Paragraph";
 import type { PostFrontmatter } from "../types";
 import Image from "../lib/prose/Image.astro";
-import {getProjects} from "../lib/projects"
+import { getProjects } from "../lib/projects";
 import Project from "../components/Project.astro";
-
 
 let posts = await Astro.glob<PostFrontmatter>("../../posts/**/*.mdx");
 
@@ -22,7 +21,7 @@ posts.sort((a, b) => {
   );
 });
 
-const projects = await getProjects()
+const projects = await getProjects();
 ---
 
 <BaseLayout title="Riki Phukon" description="personal web">
@@ -42,42 +41,46 @@ const projects = await getProjects()
     </Paragraph>
 
     <div class="flex flex-row place-content-center md:ml-28">
-      <Image src="/collage.jpg" alt="A bird." width={500} height={500}/>
+      <Image src="/collage.jpg" alt="A bird." width={500} height={500} />
     </div>
   </main>
-  <ul>
-    {
-      posts.map(({ frontmatter }) => {
-        const date = new Date(frontmatter.date);
+  <hr />
+  <Paragraph class="mt-6">
+    <h1 class="text-2xl pb-3">Musings</h1>
+    <ul>
+      {
+        posts.map(({ frontmatter }) => {
+          const date = new Date(frontmatter.date);
 
-        return (
-          <li>
-            <Link
-              href={frontmatter.path}
-              class="flex flex-row justify-between gap-2"
-              noUnderline
-            >
-              <h2 class="font-sans text-gray-800 dark:text-gray-300">
-                {frontmatter.title}
-              </h2>
-              <time
-                datetime={date.toISOString()}
-                class="shrink-0 tabular-nums tracking-tighter text-gray-600 dark:text-gray-400"
+          return (
+            <li>
+              <Link
+                href={frontmatter.path}
+                class="flex flex-row justify-between gap-2"
+                noUnderline
               >
-                {formatDate(date)}
-              </time>
-            </Link>
-          </li>
-        );
-      })
-    }
-  </ul>
-  <hr/>
-  
-    <h1 class="mt-8 -mb-2">Projects</h1><br/>
-    <div class="grid grid-cols-2 gap-4 md:grid-cols-3 text-xs">
-      {projects.map((project) => <Project {project} />)}
-    </div>
+                <h2 class="font-sans text-gray-800 dark:text-gray-300">
+                  {frontmatter.title}
+                </h2>
+                <time
+                  datetime={date.toISOString()}
+                  class="shrink-0 tabular-nums tracking-tighter text-gray-600 dark:text-gray-400"
+                >
+                  {formatDate(date)}
+                </time>
+              </Link>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </Paragraph>
+  <hr />
+
+  <h1 class="-mb-2 mt-8 text-2xl">The shack</h1><br />
+  <div class="grid grid-cols-2 gap-4 text-base md:grid-cols-3">
+    {projects.map((project) => <Project {project} />)}
+  </div>
 
   <Paragraph class="mt-6">
     <small class="text-gray-600 dark:text-gray-500"
