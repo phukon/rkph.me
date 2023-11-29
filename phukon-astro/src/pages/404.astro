@@ -1,0 +1,60 @@
+---
+import CustomLayout from "../layouts/CustomLayout.astro";
+---
+
+<CustomLayout title="404" description="not found">
+  <style>
+    body {
+      background-color: rgb(23 23 23);
+      color: #ffffff;
+      font-family: monospace;
+      text-align: center;
+      margin: 0;
+      padding: 50px;
+      margin-top: 10rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    pre {
+      font-family: monospace;
+      font-size: 1.5em;
+      white-space: pre;
+      animation: slide 15s linear infinite;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 40px;
+    }
+  </style>
+  <body>
+    <pre>
+      /    /    
+  ╭━━━╮   ╭━━━╮
+  ┃ • ┃   ┃ • ┃
+  ┃   ┃   ┃   ┃
+  ╰━━━╯   ╰━━━╯
+        -      
+  </pre>
+
+     Page Not Found<br />
+     You've wandered into uncharted space.</body
+  >
+   Return <u><a href="/">home</a></u> or try another page.
+</CustomLayout>
