@@ -39,7 +39,7 @@ export async function getProjects(): Promise<Project[]> {
     },
     {
       repo: "Project Athena (vanilla)",
-      link: "Github: https://github.com/phukon/project-athena",
+      link: "https://github.com/phukon/project-athena",
       description: "Academic resource aggregator.",
     },
   ];
