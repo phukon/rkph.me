@@ -4,10 +4,10 @@ I also craft design centric digital experiences filled with cool interactions
 The little shack -
 <table>
   <tr>
-    <th width="150">CitySort</th>
-    <th width="150">Project Athena</th>
-    <th width="150">Personal web</th>
-    <th width="150">cakeJS</th>
+    <th width="200">CitySort</th>
+    <th width="200">Project Athena</th>
+    <th width="200">Personal web</th>
+    <th width="200">console-animations</th>
   </tr>
   <tr>
     <td align="center">
@@ -24,13 +24,18 @@ The little shack -
       <img src="https://raw.githubusercontent.com/phukon/phukon/main/phukon-astro/public/favicon/android-chrome-192x192.png" width="90" height="90" alt="Riki Phukon"/>
       </a>
     </td>
+    <td align="center">
+      <a title="console-animations" href="https://www.npmjs.com/package/console-animations">
+      <img src="https://avatars.githubusercontent.com/u/6078720?s=200&v=4" width="90" height="90" alt="Riki Phukon"/>
+      </a>
+    </td>
   </tr>
 
   <tr>
-    <th width="150">Xongroh</th>
-    <th width="150">Outnumbered</th>
-    <th width="150">Project Athena (vanilla)</th>
-    <th width="150">Assignment Anthony</th>
+    <th width="200">Xongroh</th>
+    <th width="200">Outnumbered</th>
+    <th width="200">Project Athena (vanilla)</th>
+    <th width="200">Assignment Anthony</th>
   </tr>
   <tr>
 
