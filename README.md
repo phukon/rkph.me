@@ -7,6 +7,7 @@ The little shack -
     <th width="150">CitySort</th>
     <th width="150">Project Athena</th>
     <th width="150">Personal web</th>
+    <th width="150">cakeJS</th>
   </tr>
   <tr>
     <td align="center">
@@ -24,10 +25,12 @@ The little shack -
       </a>
     </td>
   </tr>
+
   <tr>
     <th width="150">Xongroh</th>
     <th width="150">Outnumbered</th>
     <th width="150">Project Athena (vanilla)</th>
+    <th width="150">Assignment Anthony</th>
   </tr>
   <tr>
 
@@ -45,7 +48,12 @@ The little shack -
       <a title="Outnumbered" href="https://project-athena-sigma.vercel.app/index.html">
         <img src="https://kee-kee.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F250d5b52-de94-4a58-9dde-cf191f8c0b28%2FInkedfavicon_LI.jpg?table=block&id=ef219b21-6661-4340-b1dd-71300c5032ac&spaceId=61fa7e09-f8a4-4de1-89b7-857d5030fcad&width=250&userId=&cache=v2" width="90" height="90" alt="Outnumbered"/>
       </a>
-    </td>    
+    </td>
+    <td align="center">
+      <a title="Assignment Anthony" href="https://assignment-anthony.super.site">
+      <img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/556a5c08-7cda-44e5-9ef2-e63a415d4bc4/peep/w=1920,quality=80" width="90" height="90" alt="Riki Phukon"/>
+      </a>
+    </td>
   </tr>
 </table>
 
