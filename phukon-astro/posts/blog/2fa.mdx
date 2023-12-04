@@ -3,7 +3,6 @@ title: "The Genius of TOTP 2 Factor-Auth"
 date: "2023-07-30"
 img: "/2fa/guns.webp"
 tags: ["sleep", "life", "college", "musings"]
-draft: "y"
 ---
 
 The Secure Dance of Time and Secrets for Enhanced Security
@@ -20,8 +19,7 @@ authenticating users of software applications.
 I was intrigued by how it works offline. So, I delved into it and was deeply
 impressed by the mechanics behind it. Consequently, I decided to write about it.
 
-![google](</2fa/google.webp>)
-
+<img src="/images/2fa/google.webp" />
 
 ## The Biscuit
 
@@ -30,7 +28,7 @@ War era. President Ronald Reagan faced a critical security situation when he was
 shot, and the “Biscuit” — a plastic card containing secret codes for launching
 nuclear weapons — went missing temporarily.
 
-### Multi-factor auth 
+### Multi-factor auth
 
 The Biscuit served as an example of multi-factor authentication, as it required
 “something you have” (the physical card), “something you know” (memorizing the
@@ -51,10 +49,15 @@ using two or more of the following factors:
 
 3. Something you have: This factor includes physical objects like bank cards,
    tokens, or smartphones. The possession of these objects is used to confirm
-   your identity. TOTP 2FA The Time-based One-time Password (TOTP) algorithm is
-   widely used for implementing 2FA. It generates time-based tokens and relies
-   on a shared “seed” or “constant factor” between the user and the service
-   provider.
+   your identity.
+
+## TOTP 2FA
+
+The Time-based One-time Password (TOTP) algorithm is widely used for
+implementing 2FA. It generates time-based tokens and relies on a shared “seed”
+or “constant factor” between the user and the service provider.
+
+<img src="/images/2fa/hmac.webp" />
 
 Alongside this seed, a “moving factor” is employed, which is based on time.
 Commonly, the moving factor corresponds to the current time (UNIX time is used),
@@ -62,24 +65,23 @@ and by combining the seed and the time, a unique token is produced. The token
 remains valid for a specific duration, typically around 30 seconds, after which
 it changes to a new value, providing a fresh password for each time interval.
 
-
 ## HOTP
 
-Conversely, HOTP (HMAC-Based One-Time Password) is an event-based OTP
-algorithm. Similar to TOTP, it also relies on a shared “seed” or “constant
-factor” between the user and the service provider. However, unlike TOTP’s
-time-based moving factor, HOTP employs a counter as the moving factor. Every
-time the user generates a token, the counter increments, leading to a new and
-distinct token for each successive event, such as a login attempt. TOTP is HOTP
-with the counter value being time.
+Conversely, HOTP (HMAC-Based One-Time Password) is an event-based OTP algorithm.
+Similar to TOTP, it also relies on a shared “seed” or “constant factor” between
+the user and the service provider. However, unlike TOTP’s time-based moving
+factor, HOTP employs a counter as the moving factor. Every time the user
+generates a token, the counter increments, leading to a new and distinct token
+for each successive event, such as a login attempt. TOTP is HOTP with the
+counter value being time.
 
 ### SHA1 and HMAC SHA1
 
-SHA1 is a cryptographic hash function that
-converts data into a fixed-length string of characters (40 characters in the
-case of SHA1). It has a critical property: even a minor change in the input
-results in a vastly different output. However, SHA1 is susceptible to a “length
-extension attack,” which could compromise its security.
+SHA1 is a cryptographic hash function that converts data into a fixed-length
+string of characters (40 characters in the case of SHA1). It has a critical
+property: even a minor change in the input results in a vastly different output.
+However, SHA1 is susceptible to a “length extension attack,” which could
+compromise its security.
 
 To address this issue, the HMAC SHA1 algorithm was introduced. HMAC stands for
 “Hash-based Message Authentication Code,” and it enhances the security of the
@@ -87,10 +89,12 @@ hash function by incorporating a secret key in the process.
 
 ### TOTP Implementation
 
-Algorithm The implementation of the TOTP algorithm
-involves several steps. First, the “secret” is decoded using the base32
-algorithm. Why base32? It’s because our secret is supposed to be safe and
-therefore we use any character that ASCII encoding supports.
+Algorithm The implementation of the TOTP algorithm involves several steps.
+First, the “secret” is decoded using the base32 algorithm. Why base32? It’s
+because our secret is supposed to be safe and therefore we use any character
+that ASCII encoding supports.
+
+<img src="/images/2fa/table.webp" />
 
 With ASCII encoding, we can write 256 different characters and that also
 includes control characters that are not possible to print with a normal
@@ -104,6 +108,8 @@ format. This time value is converted into a hexadecimal number and passed to the
 HMAC SHA1 function along with the shared “secret”. The resulting hash is used as
 the time-based token.
 
+<img src="/images/2fa/base.webp" />
+
 To simplify the process for the user, the token is further reduced to a 6-digit
 code using dynamic truncation. The user is then required to enter this 6-digit
 code during the login process, which significantly improves usability while
@@ -111,11 +117,11 @@ maintaining security.
 
 ## QR Code for 2FA Activation
 
-When enabling 2FA, users often use a QR code to set
-up the authentication method. This QR code contains all the necessary
-information for the TOTP algorithm, including the shared secret. Scanning the QR
-code with a mobile device’s camera quickly sets up the 2FA, making the process
-faster and more error-resistant.
+When enabling 2FA, users often use a QR code to set up the authentication
+method. This QR code contains all the necessary information for the TOTP
+algorithm, including the shared secret. Scanning the QR code with a mobile
+device’s camera quickly sets up the 2FA, making the process faster and more
+error-resistant.
 
 PS: While this article provides a glimpse into the fascinating world of TOTP
 2-factor authentication, it’s important to note that the topic is vast and
