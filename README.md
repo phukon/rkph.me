@@ -1,18 +1,23 @@
 ece ug / love ham radios, cryptography, and hardware tech <br/>
 I also craft design centric digital experiences filled with cool interactions
 
-The little shack -
 <table>
   <tr>
     <th width="150">CitySort</th>
-    <th width="150">Project Athena</th>
+    <th width="150">openlgen</th>
     <th width="150">Personal web</th>
+    <th width="150">Project Athena</th>
   </tr>
   <tr>
     <td align="center">
       <a title="CitySort" href="https://citysort.vercel.app/"><img src="https://raw.githubusercontent.com/phukon/citysort/main/citysort-frontend/public/logo.svg" width="90" height="90" alt="CitySort"/>
       </a>
     </td>
+    <td align="center">
+      <a title="openlgen" href="https://www.npmjs.com/package/openlgen">
+      <img src="https://avatars.githubusercontent.com/u/6078720?s=200&v=4" width="90" height="90" alt="Riki Phukon"/>
+      </a>
+    </td>    
     <td align="center">
       <a title="Project Athena" href="https://project-athena-react.vercel.app/">
         <img src="https://project-athena-react.vercel.app/static/media/project-athena-1.72cecaf150d1dab8e05e695795b7d7ca.svg" width="90" height="90" alt="Project Athena"/>
@@ -24,10 +29,12 @@ The little shack -
       </a>
     </td>
   </tr>
+
   <tr>
     <th width="150">Xongroh</th>
     <th width="150">Outnumbered</th>
     <th width="150">Project Athena (vanilla)</th>
+    <th width="150">console-animations</th>
   </tr>
   <tr>
 
@@ -45,7 +52,12 @@ The little shack -
       <a title="Outnumbered" href="https://project-athena-sigma.vercel.app/index.html">
         <img src="https://kee-kee.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F250d5b52-de94-4a58-9dde-cf191f8c0b28%2FInkedfavicon_LI.jpg?table=block&id=ef219b21-6661-4340-b1dd-71300c5032ac&spaceId=61fa7e09-f8a4-4de1-89b7-857d5030fcad&width=250&userId=&cache=v2" width="90" height="90" alt="Outnumbered"/>
       </a>
-    </td>    
+    </td>
+    <td align="center">
+      <a title="console-animations" href="https://www.npmjs.com/package/console-animations">
+      <img src="https://avatars.githubusercontent.com/u/6078720?s=200&v=4" width="90" height="90" alt="Riki Phukon"/>
+      </a>
+    </td>
   </tr>
 </table>
 
