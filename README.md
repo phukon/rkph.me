@@ -1,19 +1,23 @@
 ece ug / love ham radios, cryptography, and hardware tech <br/>
 I also craft design centric digital experiences filled with cool interactions
 
-The little shack -
 <table>
   <tr>
-    <th width="200">CitySort</th>
-    <th width="200">Project Athena</th>
-    <th width="200">Personal web</th>
-    <th width="200">console-animations</th>
+    <th width="150">CitySort</th>
+    <th width="150">openlgen</th>
+    <th width="150">Personal web</th>
+    <th width="150">Project Athena</th>
   </tr>
   <tr>
     <td align="center">
       <a title="CitySort" href="https://citysort.vercel.app/"><img src="https://raw.githubusercontent.com/phukon/citysort/main/citysort-frontend/public/logo.svg" width="90" height="90" alt="CitySort"/>
       </a>
     </td>
+    <td align="center">
+      <a title="openlgen" href="https://www.npmjs.com/package/openlgen">
+      <img src="https://avatars.githubusercontent.com/u/6078720?s=200&v=4" width="90" height="90" alt="Riki Phukon"/>
+      </a>
+    </td>    
     <td align="center">
       <a title="Project Athena" href="https://project-athena-react.vercel.app/">
         <img src="https://project-athena-react.vercel.app/static/media/project-athena-1.72cecaf150d1dab8e05e695795b7d7ca.svg" width="90" height="90" alt="Project Athena"/>
@@ -24,18 +28,13 @@ The little shack -
       <img src="https://raw.githubusercontent.com/phukon/phukon/main/phukon-astro/public/favicon/android-chrome-192x192.png" width="90" height="90" alt="Riki Phukon"/>
       </a>
     </td>
-    <td align="center">
-      <a title="console-animations" href="https://www.npmjs.com/package/console-animations">
-      <img src="https://avatars.githubusercontent.com/u/6078720?s=200&v=4" width="90" height="90" alt="Riki Phukon"/>
-      </a>
-    </td>
   </tr>
 
   <tr>
-    <th width="200">Xongroh</th>
-    <th width="200">Outnumbered</th>
-    <th width="200">Project Athena (vanilla)</th>
-    <th width="200">Assignment Anthony</th>
+    <th width="150">Xongroh</th>
+    <th width="150">Outnumbered</th>
+    <th width="150">Project Athena (vanilla)</th>
+    <th width="150">console-animations</th>
   </tr>
   <tr>
 
@@ -55,8 +54,8 @@ The little shack -
       </a>
     </td>
     <td align="center">
-      <a title="Assignment Anthony" href="https://assignment-anthony.super.site">
-      <img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/556a5c08-7cda-44e5-9ef2-e63a415d4bc4/peep/w=1920,quality=80" width="90" height="90" alt="Riki Phukon"/>
+      <a title="console-animations" href="https://www.npmjs.com/package/console-animations">
+      <img src="https://avatars.githubusercontent.com/u/6078720?s=200&v=4" width="90" height="90" alt="Riki Phukon"/>
       </a>
     </td>
   </tr>
