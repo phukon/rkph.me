@@ -44,9 +44,22 @@ const projects = await getProjects();
       <Image src="/collage.jpg" alt="A bird." width={500} height={500} />
     </div>
   </main>
+
   <hr />
+  <h1 class="-mb-2 mt-8 text-2xl">Things I've built</h1>
+  <Link href="https://github.com/phukon">
+    <small class="text-gray-600 dark:text-gray-500"
+      >Source code on my Github</small
+    >
+  </Link><br /><br />
+  <div class="grid grid-cols-2 gap-4 text-base md:grid-cols-3">
+    {projects.map((project) => <Project {project} />)}
+  </div>
+
+  <hr/>
+
   <Paragraph class="mt-6">
-    <h1 class="text-2xl pb-3">Musings</h1>
+    <h1 class="pb-3 text-2xl">Musings</h1>
     <ul>
       {
         posts.map(({ frontmatter }) => {
@@ -76,12 +89,6 @@ const projects = await getProjects();
     </ul>
   </Paragraph>
   <hr />
-
-  <h1 class="-mb-2 mt-8 text-2xl">The shack</h1>
-  <Link href='https://github.com/phukon'><small class="text-gray-600 dark:text-gray-500">Source code on my Github</small></Link><br /><br/>
-  <div class="grid grid-cols-2 gap-4 text-base md:grid-cols-3">
-    {projects.map((project) => <Project {project} />)}
-  </div>
 
   <Paragraph class="mt-6">
     <small class="text-gray-600 dark:text-gray-500"

@@ -1,12 +1,13 @@
-ece ug / love ham radios, cryptography, and hardware tech <br/>
-I also craft design centric digital experiences filled with cool interactions
-
+![1500x500](https://github.com/phukon/phukon/assets/60285613/d9862942-42a6-4797-a947-bb1423340cf2)
+<details>
+<summary><h3>🧰 Y = λf. (λx. f (x x)) (λx. f (x x))</h3>
+<samp>not that I like Haskell</samp></summary><br/>
 <table>
   <tr>
     <th width="150">CitySort</th>
-    <th width="150">openlgen</th>
-    <th width="150">Personal web</th>
+    <th width="150">Openlgen</th>
     <th width="150">Project Athena</th>
+    <th width="150">Personal web</th>
   </tr>
   <tr>
     <td align="center">
@@ -60,10 +61,10 @@ I also craft design centric digital experiences filled with cool interactions
     </td>
   </tr>
 </table>
+</details>
 
 ---
 
-ψ(.\_. )><br/>
 pgp fingerprint: `C8F6 B585 06C2 C2AD 8728  D045 867C 6C51 7C92 D22D`
 
 ```bash
