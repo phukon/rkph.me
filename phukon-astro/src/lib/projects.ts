@@ -12,13 +12,13 @@ export async function getProjects(): Promise<Project[]> {
   return [
     {
       repo: "CitySort",
-      link: "https://github.com/phukon/citysort",
+      link: "https://citysort.vercel.app/stats/rc685fa34f1d16c",
       description:
         " A live index of the best cities to live and work in India.",
     },
     {
       repo: "Project Athena",
-      link: "https://github.com/phukon/project-athena-react",
+      link: "https://project-athena-react.vercel.app/",
       description: "Academic resource aggregator",
     },
     {
@@ -29,7 +29,7 @@ export async function getProjects(): Promise<Project[]> {
     },
     {
       repo: "Xongroh",
-      link: "https://github.com/phukon/xongroh",
+      link: "https://xongroh.vercel.app/login",
       description: "The social media designed exclusively for Creators.",
     },
     {
@@ -39,7 +39,7 @@ export async function getProjects(): Promise<Project[]> {
     },
     {
       repo: "Project Athena (vanilla)",
-      link: "https://github.com/phukon/project-athena",
+      link: "https://project-athena-sigma.vercel.app/index.html",
       description: "Academic resource aggregator.",
     },
   ];

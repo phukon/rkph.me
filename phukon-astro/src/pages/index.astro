@@ -77,7 +77,8 @@ const projects = await getProjects();
   </Paragraph>
   <hr />
 
-  <h1 class="-mb-2 mt-8 text-2xl">The shack</h1><br />
+  <h1 class="-mb-2 mt-8 text-2xl">The shack</h1>
+  <Link href='https://github.com/phukon'><small class="text-gray-600 dark:text-gray-500">Source code on my Github</small></Link><br /><br/>
   <div class="grid grid-cols-2 gap-4 text-base md:grid-cols-3">
     {projects.map((project) => <Project {project} />)}
   </div>
