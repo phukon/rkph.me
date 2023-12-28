@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { allPosts } from ".contentlayer/generated";
 import PostList from "./components/ui/PostList";
-import NewsletterSignupForm from "./components/ui/NewsletterSignupForm";
+// import NewsletterSignupForm from "./components/ui/NewsletterSignupForm";
 
 export const metadata: Metadata = {
   title: "Blog | Riki Phukon",
@@ -38,7 +38,7 @@ export default function Blog() {
         className="animate-in"
         style={{ "--index": 3 } as React.CSSProperties}
       >
-        <NewsletterSignupForm/>
+        {/* <NewsletterSignupForm/> */}
       </div>
     </div>
   );
