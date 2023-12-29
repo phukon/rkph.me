@@ -47,11 +47,11 @@ const ConnectLinks: ConnectLink[] = [
     href: "https://github.com/phukon",
     icon: <FaGithub />,
   },
-  {
-    label: "Instagram",
-    href: "https://www.instagram.com/kungfukon/",
-    icon: <FaInstagram />,
-  },
+  // {
+  //   label: "Instagram",
+  //   href: "https://www.instagram.com/kungfukon/",
+  //   icon: <FaInstagram />,
+  // },
   {
     label: "Behance",
     href: "https://www.behance.net/rikiphukon",

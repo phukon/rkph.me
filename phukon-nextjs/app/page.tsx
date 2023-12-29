@@ -55,7 +55,16 @@ export default async function Home() {
           className="animated-list flex animate-in flex-col gap-2 text-secondary md:flex-row md:gap-6"
           style={{ "--index": 2 } as React.CSSProperties}
         >
-          <li className="transition-opacity">
+          <li className="transition-opacity md:hidden">
+            <Link
+              href="/about"
+              className="flex items-center gap-2 no-underline"
+            >
+              <ArrowUpRightIcon className="h-5 w-5" />
+              <span>About</span>
+            </Link>
+          </li>
+          <li className="hidden transition-opacity lg:block">
             <Link
               href="mailto:hello@rikiphukon.com"
               className="flex items-center gap-2 no-underline"
