@@ -1,7 +1,7 @@
 ![1500x500](https://github.com/phukon/phukon/assets/60285613/d9862942-42a6-4797-a947-bb1423340cf2)
 <details>
-<summary><h3>🧰 Y = λf. (λx. f (x x)) (λx. f (x x))</h3>
-<samp>not that I like Haskell</samp></summary><br/>
+<summary><h3>🧰 very gpu-poor optimist</h3>
+<samp>cs, electronics, retro and bikes</samp></summary><br/>
 <table>
   <tr>
     <th width="150">CitySort</th>
@@ -63,6 +63,12 @@
 </table>
 </details>
 
+<details>
+<summary><h3>📜Check out my <a href="https://github.com/phukon/practice?tab=readme-ov-file#my-sandbox-">tutorials</a></h3><samp> covers Golang, Typescript, dsa, nerdy topics, etc</samp></summary>
+  <a href="https://rikiphukon.medium.com/">Medium stories</a>
+  <a href="https://rikiphukon.hashnode.dev/">Hashnode write-ups</a>
+</details>
+
 ---
 
 pgp fingerprint: `C8F6 B585 06C2 C2AD 8728  D045 867C 6C51 7C92 D22D`
@@ -71,7 +77,7 @@ pgp fingerprint: `C8F6 B585 06C2 C2AD 8728  D045 867C 6C51 7C92 D22D`
 curl https://rikiphukon.com/pubkey.asc | gpg --import
 ```
 
-<kbd>ctrl</kbd> + <kbd>click!</kbd> > [pub-key](https://rikiphukon.com/pubkey.asc)
+<kbd>ctrl</kbd> + <kbd>click!</kbd> > [grab my public key](https://rikiphukon.com/pubkey.asc)
 
 <p align="center">
     <a href="https://rikiphukon.com">Web</a>

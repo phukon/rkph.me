@@ -6,7 +6,6 @@ import clsx from "clsx";
 import { PHProvider, PostHogPageview } from "@/providers/PostHog";
 import { Suspense } from "react";
 
-
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navigation from "@/components/Navigation";
 
@@ -14,8 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Home | Riki Phukon",
-  description:
-    "I am a full-stack software engineer who basically just enjoys creating things.",
+  description: "very gpu-poor optimist, loves cs, electronics, retro and bikes",
 };
 
 export default function RootLayout({

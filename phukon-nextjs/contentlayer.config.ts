@@ -34,7 +34,7 @@ export const Post = defineDocumentType(() => ({
     updatedAt: { type: "string", required: false },
     tags: { type: "json", required: false },
     featured: { type: "boolean", required: false },
-    shortTitle : { type: "string", required: false, default: ""},
+    shortTitle: { type: "string", required: false, default: "" },
   },
   computedFields: postComputedFields,
 }));
@@ -60,14 +60,21 @@ export const Project = defineDocumentType(() => ({
     time: { type: "string", required: true },
     url: { type: "string", required: false },
     tags: { type: "json", required: false },
-    index: {type: "number", required: true}
+    index: { type: "number", required: true },
   },
   computedFields: projectComputedFields,
 }));
 
+export const Code = defineDocumentType(() => ({
+  name: "Code",
+  filePathPattern: `code/**/*.mdx`,
+  contentType: "mdx",
+  fields: {},
+}));
+
 export default makeSource({
   contentDirPath: "content",
-  documentTypes: [Post, Project],
+  documentTypes: [Post, Project, Code],
   mdx: {
     rehypePlugins: [rehypePrism, rehypeSlug],
   },

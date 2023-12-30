@@ -6,14 +6,15 @@ import Section from "@/components/Section";
 import ConnectLinks from "../../components/ConnectLinks";
 // import Workplaces from "./components/Workplaces";
 import Gallery from "./components/Gallery";
-
+// import me from "public/gallery/me.jpg"
 import meJanlem from "public/gallery/me-janlem.jpg";
-import iitghy from "public/gallery/iitghy.jpg";
+// import iitghy from "public/gallery/iitghy.jpg";
+import nr from "public/gallery/nishi-riki.jpg"
 
 export const metadata: Metadata = {
   title: "About | Riki Phukon",
-  description:
-    "I am a full-stack developer and I also have a knack for radios and hardware.",
+  description: "very gpu-poor optimist, loves cs, electronics, retro and bikes",
+  // "I am a full-stack developer with a knack for radios and hardware.",
 };
 
 export default function About() {
@@ -38,9 +39,9 @@ export default function About() {
           <Image
             src={meJanlem}
             alt={"Riki and Janlem"}
-            width={324}
-            height={139}
-            className="pointer-events-none relative inset-0 -top-8 h-60 -rotate-6 rounded-2xl bg-gray-400 object-cover shadow-md"
+            width={220}
+            height={260}
+            className="pointer-events-none relative inset-0 -top-2 h-60 -rotate-6 rounded-2xl bg-gray-400 object-cover shadow-md"
             priority
           />
         </div>
@@ -50,11 +51,11 @@ export default function About() {
           style={{ "--index": 2 } as React.CSSProperties}
         >
           <Image
-            src={iitghy}
-            alt={"me and lily"}
+            src={nr}
+            alt={"nishi and i"}
             width={220}
             height={260}
-            className="pointer-events-none absolute inset-0 -top-32 left-[45%] w-48 rotate-6 rounded-2xl bg-gray-400 object-cover shadow-md md:left-[60%] md:w-56"
+            className="pointer-events-none absolute inset-0 -top-40 left-[45%] w-48 rotate-6 rounded-2xl bg-gray-400 object-cover shadow-md md:left-[60%] md:w-56"
             priority
           />
         </div>
@@ -68,7 +69,7 @@ export default function About() {
       >
         <Section heading="About" headingAlignment="left">
           <div className="flex flex-col gap-6">
-            <p>Namaste ji, I&apos;m Riki Phukon!</p>
+            <p>Namaste, I&apos;m Riki Phukon!</p>
 
             <p>
               I love building cool things with code and I&apos;m all about ham

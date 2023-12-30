@@ -137,15 +137,24 @@ const gear = [
     category: "Apps",
     image:
       "https://styles.redditmedia.com/t5_30kix/styles/communityIcon_n2hvyn96zwk81.png",
-    description: "I know the basic keybinds.",
+    description: "I use NvChad config sprinkled with Catpuccin colours and nerdfonts.",
     get: true,
     link: "https://neovim.io/",
+  },
+  {
+    name: "Notion",
+    category: "Apps",
+    image:
+      "/gear/notion.png",
+    description: "My second brain.",
+    get: true,
+    link: "https://code.visualstudio.com/",
   },
   {
     name: "VS Code",
     category: "Apps",
     image:
-      "https://user-images.githubusercontent.com/806104/86617231-8ff0e300-bf7c-11ea-89ef-10866483c511.png",
+      "/gear/vscode.png",
     description: "This is hands down my fav.",
     get: true,
     link: "https://code.visualstudio.com/",

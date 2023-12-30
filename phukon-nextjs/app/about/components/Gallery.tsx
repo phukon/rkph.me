@@ -9,7 +9,7 @@ import localFont from "next/font/local";
 import lirmen from "public/gallery/lirmen-nagaland.jpg";
 import meJanlem from "public/gallery/me-janlem.jpg";
 import iitghy from "public/gallery/iitghy.jpg";
-import dirang from "public/gallery/dirang.jpg";
+import nr from "public/gallery/nishi-riki.jpg";
 
 import Halo from "@/components/ui/Halo";
 
@@ -151,7 +151,7 @@ export default function Gallery() {
           index={1}
         />
         <Photo
-          src={dirang}
+          src={iitghy}
           meta="2022-04-07"
           alt="Dirang Valley, Arunchal Pradesh"
           width={230}
@@ -172,7 +172,7 @@ export default function Gallery() {
           index={3}
         />
         <Photo
-          src={iitghy}
+          src={nr}
           meta="2022-08-28"
           alt={"Evening walk around the campus"}
           width={220}
