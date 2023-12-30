@@ -1,4 +1,10 @@
-import { FaBehanceSquare, FaMediumM, FaGithub, FaInstagram } from "react-icons/fa";
+import {
+  FaBehanceSquare,
+  FaMediumM,
+  FaGithub,
+  FaInstagram,
+  FaNpm,
+} from "react-icons/fa";
 
 interface ConnectLink {
   label: string;
@@ -21,6 +27,11 @@ const ConnectLinks: ConnectLink[] = [
         <path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z" />
       </svg>
     ),
+  },
+  {
+    label: "NPM",
+    href: "https://www.npmjs.com/~phukon",
+    icon: <FaNpm />,
   },
   // {
   //   label: "Partnerships",
@@ -47,11 +58,11 @@ const ConnectLinks: ConnectLink[] = [
     href: "https://github.com/phukon",
     icon: <FaGithub />,
   },
-  // {
-  //   label: "Instagram",
-  //   href: "https://www.instagram.com/kungfukon/",
-  //   icon: <FaInstagram />,
-  // },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/kungfukon/",
+    icon: <FaInstagram />,
+  },
   {
     label: "Behance",
     href: "https://www.behance.net/rikiphukon",
