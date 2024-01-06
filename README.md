@@ -1,4 +1,5 @@
-![1500x500](https://github.com/phukon/phukon/assets/60285613/d9862942-42a6-4797-a947-bb1423340cf2)
+![1500x500](https://github.com/phukon/phukon/assets/60285613/40f1d252-1c80-4a56-9b73-9100f94825d6)
+
 <details>
 <summary><h3>🧰 very gpu-poor optimist</h3>
 <samp>cs, electronics, retro and bikes</samp></summary><br/>

@@ -36,7 +36,7 @@ export default function Navigation() {
           ))}
         </ul>
         <Popover className="relative ml-auto md:hidden">
-          <Popover.Button className="flex items-center gap-1 rounded-lg p-1 text-secondary focus:ring-0 focus-visible:outline-none">
+          <Popover.Button className="flex border-2 border-[#0a76a8] items-center gap-1 rounded-lg p-1.5 text-secondary focus:ring-0 focus-visible:outline-none">
             Menu
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ export default function Navigation() {
             leaveTo="opacity-0 translate-y-1"
           >
             <Popover.Panel
-              className="absolute right-0 z-10 mt-2 w-40 origin-top-right overflow-auto rounded-xl bg-white p-2 text-base shadow-lg focus:outline-none dark:bg-black sm:text-sm"
+              className="absolute right-0 border-2 border-[#0a76a8]  z-10 mt-2 w-40 origin-top-right overflow-auto rounded-xl bg-white p-2 text-base shadow-lg focus:outline-none dark:bg-black sm:text-sm"
               style={theme === "terminal" ? { background: "#040605" } : {}}
             >
               <div className="grid">

@@ -137,9 +137,9 @@ const gear = [
     category: "Apps",
     image:
       "https://styles.redditmedia.com/t5_30kix/styles/communityIcon_n2hvyn96zwk81.png",
-    description: "I use NvChad config sprinkled with Catpuccin colours and nerdfonts.",
+    description: "My config is built on top of NvChad, sprinkled with Catpuccin colours and nerdfonts. Here's my config",
     get: true,
-    link: "https://neovim.io/",
+    link: "https://github.com/phukon/nvim-config",
   },
   {
     name: "Notion",
