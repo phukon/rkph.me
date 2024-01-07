@@ -4,6 +4,7 @@ import {
   FaGithub,
   FaInstagram,
   FaNpm,
+  FaHeart,
 } from "react-icons/fa";
 
 interface ConnectLink {
@@ -13,6 +14,11 @@ interface ConnectLink {
 }
 
 const ConnectLinks: ConnectLink[] = [
+  {
+    label: "Upvote ^_^",
+    href: "https://donate.stripe.com/5kA4joa4ObNKatyfYY",
+    icon: <FaHeart />,
+  },
   {
     label: "Email (General)",
     href: "mailto:hello@rikiphukon.com",
@@ -57,7 +63,8 @@ const ConnectLinks: ConnectLink[] = [
     label: "GitHub",
     href: "https://github.com/phukon",
     icon: <FaGithub />,
-  },
+  }, 
+
   {
     label: "Instagram",
     href: "https://www.instagram.com/kungfukon/",

@@ -31,7 +31,7 @@ export default function About() {
           Just a quick glimpse.
         </p>
       </div>
-      <div className="mb-8 lg:hidden">
+      <div className="mb-8 md:hidden">
         <div
           className="animate-in"
           style={{ "--index": 1 } as React.CSSProperties}
@@ -60,7 +60,7 @@ export default function About() {
           />
         </div>
       </div>
-      <div className="hidden lg:block">
+      <div className="hidden md:block">
         <Gallery />
       </div>
       <div

@@ -34,7 +34,7 @@ export default async function Home() {
             className="animate-in text-secondary"
             style={{ "--index": 1 } as React.CSSProperties}
           >
-            bikes, electronics and cs.
+            fullstack | golang, typescript
           </p>
         </div>
         <div
@@ -58,29 +58,12 @@ export default async function Home() {
         >
           Love retro, ham radios, computers, and diving deep into the world of
           hardware geekiness.
+          My works span web, CLI apps, blogs, and tools aimed at aiding fellow developers.
         </p>
         <ul
           className="animated-list flex animate-in flex-col gap-2 text-secondary md:flex-row md:gap-6"
           style={{ "--index": 2 } as React.CSSProperties}
         >
-          <li className="transition-opacity md:hidden">
-            <Link
-              href="/about"
-              className="flex items-center gap-2 no-underline"
-            >
-              <ArrowUpRightIcon className="h-5 w-5" />
-              <span>About</span>
-            </Link>
-          </li>
-          <li className="hidden transition-opacity lg:block">
-            <Link
-              href="mailto:hello@rikiphukon.com"
-              className="flex items-center gap-2 no-underline"
-            >
-              <ArrowUpRightIcon className="h-5 w-5" />
-              <span>Email me</span>
-            </Link>
-          </li>
           <li className="transition-opacity">
             <Link
               href="/links"
