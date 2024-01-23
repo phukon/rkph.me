@@ -1,8 +1,7 @@
-![1500x500](https://github.com/phukon/phukon/assets/60285613/40f1d252-1c80-4a56-9b73-9100f94825d6)
-
+![1080x360](https://github.com/phukon/phukon/assets/60285613/d70af376-a44e-4bfb-8b76-cde93747b660)
 <details>
-<summary><h3>🧰 very gpu-poor optimist</h3>
-<samp>cs, electronics, retro and bikes</samp></summary><br/>
+<summary><p>🧰 gpu-poor optimist</p>
+<samp>electronics ✦ cs ✦ design</samp></summary><br/>
 <table>
   <tr>
     <th width="150">CitySort</th>
@@ -64,11 +63,7 @@
 </table>
 </details>
 
-<details>
-<summary><h3>📜Check out my <a href="https://github.com/phukon/practice?tab=readme-ov-file#my-sandbox-">tutorials</a></h3><samp> covers Golang, Typescript, dsa, nerdy topics, etc</samp></summary>
-  <a href="https://rikiphukon.medium.com/">Medium stories</a>
-  <a href="https://rikiphukon.hashnode.dev/">Hashnode write-ups</a>
-</details>
+<p>📜Check out my <a href="https://github.com/phukon/practice?tab=readme-ov-file#my-sandbox-">tutorials</a></p><samp> covers Golang, Typescript, dsa, nerdy topics, etc</samp>
 
 ---
 
@@ -79,11 +74,3 @@ curl https://rikiphukon.com/pubkey.asc | gpg --import
 ```
 
 <kbd>ctrl</kbd> + <kbd>click!</kbd> > [grab my public key](https://rikiphukon.com/pubkey.asc)
-
-<p align="center">
-    <a href="https://rikiphukon.com">Web</a>
-    •
-    <a href="https://www.behance.net/rikiphukon">Behance</a>
-    •
-    <a href="https://rikiphukon.medium.com">Medium</a>
-</p>

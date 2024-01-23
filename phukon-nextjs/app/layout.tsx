@@ -14,6 +14,14 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Home | Riki Phukon",
   description: "very gpu-poor optimist, loves cs, electronics, retro and bikes",
+  openGraph: {
+    images: [
+      {
+        url: `https://rikiphukon.com/api/og?title=very+gpu+poor+optimist`,
+        alt: "rikiphukon.com",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

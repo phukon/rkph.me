@@ -40,11 +40,9 @@ export async function generateMetadata(
     title,
     publishedAt: publishedTime,
     summary: description,
-    image,
-    slug,
+    // image,
+    // slug,
   } = post;
-
-  const ogImage = `https://rikiphukon.com/${image}`;
 
   const metadata: Metadata = {
     title: `${title} | Riki Phukon`,
