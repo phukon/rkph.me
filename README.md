@@ -1,7 +1,7 @@
 ![1080x360](https://github.com/phukon/phukon/assets/60285613/d70af376-a44e-4bfb-8b76-cde93747b660)
 <details>
 <summary><p>🧰 gpu-poor optimist</p>
-<samp>electronics ✦ cs ✦ design</samp></summary><br/>
+<samp>Typescript ✦ Golang</samp></summary><br/>
 <table>
   <tr>
     <th width="150">CitySort</th>
@@ -67,10 +67,10 @@
 
 ---
 
-pgp fingerprint: `C8F6 B585 06C2 C2AD 8728  D045 867C 6C51 7C92 D22D`
-
-```bash
-curl https://rikiphukon.com/pubkey.asc | gpg --import
-```
-
-<kbd>ctrl</kbd> + <kbd>click!</kbd> > [grab my public key](https://rikiphukon.com/pubkey.asc)
+> [!NOTE]
+> ```bash
+> curl https://rikiphukon.com/pubkey.asc | gpg --import
+> ```
+> pgp fingerprint: `C8F6 B585 06C2 C2AD 8728  D045 867C 6C51 7C92 D22D`
+> 
+> <kbd>ctrl</kbd> + <kbd>click!</kbd> > [grab my public key](https://rikiphukon.com/pubkey.asc)

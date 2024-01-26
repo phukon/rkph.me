@@ -34,7 +34,7 @@ export default async function Home() {
             className="animate-in text-secondary"
             style={{ "--index": 1 } as React.CSSProperties}
           >
-            fullstack | golang, typescript
+            IPA /phuːkɔːn/ • फूकौन
           </p>
         </div>
         <div

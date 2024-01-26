@@ -94,8 +94,9 @@ export default function About() {
           <div className="flex w-full flex-col gap-8">
             <p>
               Have a question or just want to chat? Feel free to{" "}
-              <Link href="https://twitter.com/kungfukon">text me</Link>. Try
-              finding me anywhere else at @kungfukon.
+              <Link href="https://twitter.com/messages/compose?recipient_id=3151761882&text=hiiii%20Riki">text me</Link>.
+               {/* Try
+              finding me anywhere else at @kungfukon. */}
             </p>
             <ul className="animated-list grid flex-grow grid-cols-1 gap-2 md:grid-cols-2">
               {ConnectLinks.map((link) => (
