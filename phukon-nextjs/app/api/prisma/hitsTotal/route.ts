@@ -13,7 +13,7 @@ export async function GET() {
     return Response.json({ total: total._sum.views });
   } catch (error) {
     console.error(error);
-    return new Response("Something went wrong", { status: 200 });
+    return new Response("Something went wrong", { status: 500 });
   } finally {
     await prisma.$disconnect();
   }
