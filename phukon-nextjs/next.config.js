@@ -7,6 +7,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: [
+      "github.githubassets.com",
       "styles.redditmedia.com",
       "user-images.githubusercontent.com",
       "upload.wikimedia.org",

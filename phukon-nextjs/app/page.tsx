@@ -13,6 +13,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/Tooltip";
+import IframeEmbed from "@/components/IframeEmbed";
 
 export default async function Home() {
   const posts = allPosts
@@ -58,7 +59,7 @@ export default async function Home() {
         >
           Love retro, ham radios, computers, and diving deep into the world of
           hardware geekiness.
-          My works span web, CLI apps, blogs, and tools aimed at aiding fellow developers.
+          My works span web, CLI apps, blogs, and tools aimed at aiding fellow engineers.
         </p>
         <ul
           className="animated-list flex animate-in flex-col gap-2 text-secondary md:flex-row md:gap-6"
@@ -74,21 +75,13 @@ export default async function Home() {
             </Link>
           </li>
         </ul>
+        <IframeEmbed src="https://open.spotify.com/embed/track/3wtV2ifnHzirkAElgTGh63?utm_source=generator" />
       </div>
+
       <div
         className="flex animate-in flex-col gap-8"
         style={{ "--index": 3 } as React.CSSProperties}
       >
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Coderenderer />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Click to download PGP public key.</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
         <h2 className="text-secondary">Latest Posts</h2>
         <PostList posts={posts} />
         <Link
@@ -98,6 +91,16 @@ export default async function Home() {
           See All
         </Link>
       </div>
+      <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Coderenderer />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Click to download PGP public key.</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
     </div>
   );
 }
