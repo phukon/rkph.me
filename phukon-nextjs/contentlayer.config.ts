@@ -20,7 +20,7 @@ const postComputedFields: ComputedFields = {
   og: {
     type: "string",
     resolve: (doc) => `/blog/${getSlug(doc)}/image.png`,
-  },
+  }
 };
 
 export const Post = defineDocumentType(() => ({
@@ -35,6 +35,8 @@ export const Post = defineDocumentType(() => ({
     tags: { type: "json", required: false },
     featured: { type: "boolean", required: false },
     shortTitle: { type: "string", required: false, default: "" },
+    iframeUrl: {type: "string", required: false},
+    coverImageOnPage: {type: "boolean", required: true}
   },
   computedFields: postComputedFields,
 }));

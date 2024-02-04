@@ -12,6 +12,7 @@ import PostList from "@/app/blog/components/ui/PostList";
 import { formatDate } from "lib/formatdate";
 
 import Avatar from "@/public/avatar.jpg";
+import IframeEmbed from "@/components/IframeEmbed";
 
 type PostProps = {
   post: PostType;
@@ -117,8 +118,13 @@ export default async function Post({ params }: { params: any }) {
             </div>
           </div>
         </div>
+        {/* {post.iframeUrl && (
+          <div className="-ml-6 mt-5 w-[calc(100%+48px)] px-2 max-w-none animate-in md:rounded-lg lg:-ml-16 lg:w-[calc(100%+128px)]">
+          <IframeEmbed src={post.iframeUrl} />
+          </div>
+        )} */}
 
-        {post.image && (
+        {post.image && post.coverImageOnPage === true && (
           <>
             <div className="h-8" />
             <Image
