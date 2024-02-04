@@ -22,7 +22,7 @@ const Item = ({
   description,
   image,
   link,
-  sponsored,
+  // sponsored,
   get = false,
 }: ItemProps) => (
   <li className="flex items-center gap-4 transition-opacity">
@@ -56,9 +56,9 @@ const Item = ({
           >
             Web
           </a>
-          {sponsored && (
+          {/* {sponsored && (
             <p className="mt-1 text-center text-xs text-tertiary">Sponsored</p>
-          )}
+          )} */}
         </div>
       )}
     </div>
@@ -115,7 +115,6 @@ export default function Gear() {
                       description={item.description}
                       image={item.image}
                       link={item.link}
-                      sponsored={item.sponsored}
                       get={item.get}
                     />
                   );
@@ -134,7 +133,7 @@ export default function Gear() {
 const gear = [
   {
     name: "NeoVim",
-    category: "Apps",
+    category: "Software",
     image:
       "https://styles.redditmedia.com/t5_30kix/styles/communityIcon_n2hvyn96zwk81.png",
     description: "My config is built on top of NvChad, sprinkled with Catpuccin colours and nerdfonts. Here's my config",
@@ -143,20 +142,20 @@ const gear = [
   },
   {
     name: "Notion",
-    category: "Apps",
+    category: "Software",
     image:
       "/gear/notion.png",
     description: "My second brain.",
-    get: true,
-    link: "https://code.visualstudio.com/",
+    get: false,
+    link: "https://https://www.notion.so/",
   },
   {
     name: "VS Code",
-    category: "Apps",
+    category: "Software",
     image:
       "/gear/vscode.png",
     description: "This is hands down my fav.",
-    get: true,
+    get: false,
     link: "https://code.visualstudio.com/",
   },
   {
@@ -168,20 +167,20 @@ const gear = [
   },
   {
     name: "Obsidian",
-    category: "Apps",
+    category: "Software",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/2023_Obsidian_logo.svg/1200px-2023_Obsidian_logo.svg.png",
     description: "Minimal, fast and it's all markdown!",
     link: "https://obsidian.md/",
-    get: true,
+    get: false,
   },
-  {
-    name: "Portronics Portable Laptop Stand",
-    category: "Other",
-    image: stand,
-    description: "Compact Laptop Stand",
-    link: "https://www.amazon.in/gp/product/B0BV6ZW8KN/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1",
-    sponsored: false,
-    get: true,
-  },
+  // {
+  //   name: "Portronics Portable Laptop Stand",
+  //   category: "Other",
+  //   image: stand,
+  //   description: "Compact Laptop Stand",
+  //   link: "https://www.amazon.in/gp/product/B0BV6ZW8KN/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1",
+  //   sponsored: false,
+  //   get: true,
+  // },
 ];

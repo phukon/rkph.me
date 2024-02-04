@@ -60,7 +60,6 @@ export async function generateMetadata(
           alt: title,
         },
       ],
-      
     },
   };
 
@@ -81,6 +80,7 @@ export default async function Post({ params }: { params: any }) {
 
   return (
     <div className="flex flex-col gap-20">
+      <Link className="md:hidden -mb-10" href="/blog">← All writeups</Link>
       <article>
         <div
           className="flex animate-in flex-col gap-8"
@@ -118,11 +118,11 @@ export default async function Post({ params }: { params: any }) {
             </div>
           </div>
         </div>
-        {/* {post.iframeUrl && (
-          <div className="-ml-6 mt-5 w-[calc(100%+48px)] px-2 max-w-none animate-in md:rounded-lg lg:-ml-16 lg:w-[calc(100%+128px)]">
-          <IframeEmbed src={post.iframeUrl} />
+        {post.iframeUrl && (
+          <div className="-ml-6 mt-7 w-[calc(100%+48px)] max-w-none animate-in px-2 md:rounded-lg lg:-ml-16 lg:w-[calc(100%+128px)]">
+            <IframeEmbed src={post.iframeUrl} />
           </div>
-        )} */}
+        )}
 
         {post.image && post.coverImageOnPage === true && (
           <>
@@ -139,7 +139,6 @@ export default async function Post({ params }: { params: any }) {
             />
           </>
         )}
-
         <div className="h-16" />
         <div
           className="prose prose-neutral animate-in"
@@ -153,7 +152,7 @@ export default async function Post({ params }: { params: any }) {
 
       {/* <Subscribe /> */}
 
-      <Link href="/blog">← All Blogs</Link>
+      <Link href="/blog">← All writeups</Link>
       {/* {related.length ? (
         <div className="flex flex-col items-start gap-6">
           <h2>Related posts</h2>

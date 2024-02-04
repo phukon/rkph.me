@@ -12,10 +12,10 @@ import { Popover, Transition } from "@headlessui/react";
 import clsx from "clsx";
 
 const links = [
-  { label: "About", href: "/about" },
   { label: "Notes", href: "/blog" },
-  { label: "Gear", href: "/gear" },
   { label: "Works", href: "/projects" },
+  { label: "Gear", href: "/gear" },
+  { label: "About", href: "/about" },
 ];
 
 export default function Navigation() {
