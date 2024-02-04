@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: `https://rikiphukon.com/api/og?title=very+gpu+poor+optimist`,
-        alt: "rikiphukon.com",
+        url: `https://rkph.me/api/og?title=I%20design%20and%20build%20apps,%20and%20everything%20that%20comes%20with%20it.&image=/gallery/lirmen-nagaland.jpg`,
+        alt: "rkph.me",
       },
     ],
   },

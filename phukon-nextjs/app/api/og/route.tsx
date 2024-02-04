@@ -4,70 +4,88 @@ import { NextRequest } from "next/server";
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
   const postTitle = searchParams.get("title");
+  const imageUrl = searchParams.get("image");
+  const summary = searchParams.get("summary");
+  const absoluteImageUrl = imageUrl ? `${req.nextUrl.origin}${imageUrl}` : null;
 
   return new ImageResponse(
     (
       <div
         style={{
-          display: "flex",
           height: "100%",
           width: "100%",
-          alignItems: "center",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
           justifyContent: "center",
-          letterSpacing: "-.02em",
-          fontWeight: 700,
-          background: "white",
+          fontWeight: 600,
+          color: "white",
         }}
       >
-        <div
-          style={{
-            left: 42,
-            top: 42,
-            position: "absolute",
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <span
+        {absoluteImageUrl ? (
+          <img
+            src={absoluteImageUrl}
+            alt=""
+            width={1050}
+            height={549}
             style={{
-              width: 24,
-              height: 24,
-              background: "black",
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center",
             }}
           />
-          <span
-            style={{
-              marginLeft: 8,
-              fontSize: 20,
-            }}
-          >
-            rkph.me
-          </span>
-        </div>
+        ) : (
+          "no image"
+        )}
         <div
           style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            padding: "20px 50px",
-            margin: "0 42px",
-            fontSize: 40,
-            width: "auto",
-            maxWidth: 550,
-            textAlign: "center",
-            backgroundColor: "black",
-            color: "white",
-            lineHeight: 1.4,
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            height: "66%",
+            width: "100%",
+            background:
+              "linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%)",
+          }}
+        />
+        <h1
+          style={{
+            position: "absolute",
+            bottom: 130,
+            left: 80,
+            margin: 0,
+            fontSize: 60,
+            fontFamily: "NYT Cheltenham",
+            maxWidth: 900,
+            whiteSpace: "pre-wrap",
+            letterSpacing: -1,
           }}
         >
           {postTitle}
-        </div>
+        </h1>
+        {summary !== null && (
+          <p
+            style={{
+              position: "absolute",
+              bottom: 50,
+              left: 80,
+              margin: 0,
+              fontSize: 32,
+              fontFamily: "Arial",
+              maxWidth: 900,
+              whiteSpace: "pre-wrap",
+              letterSpacing: -1,
+            }}
+          >
+            {summary}
+          </p>
+        )}
       </div>
     ),
-
     {
-      width: 1920,
-      height: 1080,
+      width: 1200,
+      height: 630,
     },
   );
 }
