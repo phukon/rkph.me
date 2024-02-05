@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import clsx from "clsx";
 import { PHProvider, PostHogPageview } from "@/providers/PostHog";
 import { Suspense } from "react";
-
+import Script from "next/script";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navigation from "@/components/Navigation";
 
@@ -41,6 +41,11 @@ export default function RootLayout({
             "width-full bg-primary text-primary antialiased",
           )}
         >
+          <Script
+            async
+            src="https://analytics.rkph.me/script.js"
+            data-website-id="5a4fa9e7-1f67-4be1-af74-d06b2512b52d"
+          />
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Navigation />
             <div
