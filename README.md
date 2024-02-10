@@ -1,7 +1,6 @@
 ![1080x360](https://github.com/phukon/phukon/assets/60285613/d70af376-a44e-4bfb-8b76-cde93747b660)
 <details>
-<summary><p>🧰 gpu-poor optimist</p>
-<samp>Typescript ✦ Golang</samp></summary><br/>
+<summary><p>📜Check out my <a href="https://github.com/phukon/practice?tab=readme-ov-file#my-sandbox-">tutorials</a></p><samp> covers Golang, Typescript, dsa, nerdy topics, etc</samp></summary><br/>
 <table>
   <tr>
     <th width="150">CitySort</th>
@@ -63,7 +62,7 @@
 </table>
 </details>
 
-<p>📜Check out my <a href="https://github.com/phukon/practice?tab=readme-ov-file#my-sandbox-">tutorials</a></p><samp> covers Golang, Typescript, dsa, nerdy topics, etc</samp>
+
 
 ---
 

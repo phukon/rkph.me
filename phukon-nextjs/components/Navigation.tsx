@@ -12,7 +12,7 @@ import { Popover, Transition } from "@headlessui/react";
 import clsx from "clsx";
 
 const links = [
-  { label: "Notes", href: "/blog" },
+  { label: "Stories/Notes", href: "/blog" },
   { label: "Works", href: "/projects" },
   { label: "Gear", href: "/gear" },
   { label: "About", href: "/about" },
