@@ -3,22 +3,17 @@ import { Listbox } from "@headlessui/react";
 import clsx from "clsx";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
-
 import { MoonIcon, CheckIcon } from "@heroicons/react/20/solid";
 import { SunIcon } from "@heroicons/react/24/outline";
-
 export default function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme, resolvedTheme, themes } = useTheme();
-
   useEffect(() => {
     setMounted(true);
   }, []);
-
   if (!mounted) {
     return null;
   }
-
   return (
     <>
       <Listbox value={theme} onChange={(value) => setTheme(value)}>
@@ -49,10 +44,7 @@ export default function ThemeSwitcher() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ type: "spring", bounce: 0.3, duration: 0.3 }}
-                    className="absolute right-0 p-2 mt-2 overflow-auto text-base origin-top-right shadow-lg max-h-60 w-42 rounded-xl bg-white dark:bg-black focus:outline-none sm:text-sm capitalize"
-                    style={
-                      theme === "terminal" ? { background: "#040605" } : {}
-                    }
+                    className="absolute right-0 p-2 mt-2 overflow-auto text-base origin-top-right shadow-lg max-h-60 w-42 rounded-xl bg-primary focus:outline-none sm:text-sm capitalize"
                   >
                     {themes.map((theme) => (
                       <Listbox.Option
@@ -60,7 +52,7 @@ export default function ThemeSwitcher() {
                         className={({ active }) =>
                           clsx(
                             "relative cursor-default select-none py-2 pl-10 pr-4 rounded-md",
-                            active ? "bg-tertiary" : ""
+                            active ? "bg-secondary" : ""
                           )
                         }
                         value={theme}

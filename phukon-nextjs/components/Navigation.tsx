@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 import NavLink from "./ui/NavLink";
 import ThemeSwitcher from "./ThemeSwitcher";
@@ -22,8 +23,27 @@ export default function Navigation() {
   const pathname = `/${usePathname().split("/")[1]}`; // active paths on dynamic subpages
   const { theme } = useTheme();
 
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const scrollThreshold = 100; // Adjust this value as needed
+
+      setHasScrolled(scrollTop > scrollThreshold);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={clsx("relative top-0 z-20 bg-primary md:sticky")}>
+    <header className={clsx("sticky top-0 z-20 bg-white dark:bg-black lg:border-b  transition-all duration-300", 
+    hasScrolled ? "border-secondary" : "border-transparent"
+    )}>
       <nav className="lg mx-auto flex max-w-[700px] items-center justify-between gap-3 px-4 py-3 md:px-6">
         <Link href="/" className="shrink-0 text-primary">
           <Image height={30} width={30} src="/crown.svg" alt="icon" />
@@ -36,7 +56,7 @@ export default function Navigation() {
           ))}
         </ul>
         <Popover className="relative ml-auto md:hidden">
-          <Popover.Button className="flex border-2 border-[#0a76a8] items-center gap-1 rounded-lg p-1.5 text-secondary focus:ring-0 focus-visible:outline-none">
+          <Popover.Button className="flex items-center gap-1 rounded-lg border-2 border-[#0a76a8] p-1.5 text-secondary focus:ring-0 focus-visible:outline-none">
             Menu
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +78,7 @@ export default function Navigation() {
             leaveTo="opacity-0 translate-y-1"
           >
             <Popover.Panel
-              className="absolute right-0 border-2 border-[#0a76a8]  z-10 mt-2 w-40 origin-top-right overflow-auto rounded-xl bg-white p-2 text-base shadow-lg focus:outline-none dark:bg-black sm:text-sm"
+              className="absolute right-0 z-10 mt-2 w-40 origin-top-right overflow-auto rounded-xl bg-primary p-2 text-base shadow-lg focus:outline-none sm:text-sm"
               style={theme === "terminal" ? { background: "#040605" } : {}}
             >
               <div className="grid">
@@ -69,7 +89,7 @@ export default function Navigation() {
                     className={clsx(
                       "rounded-md px-4 py-2 transition-colors hover:text-primary",
                       pathname === link.href
-                        ? "bg-tertiary font-medium"
+                        ? "bg-secondary font-medium"
                         : "font-normal",
                     )}
                   >
