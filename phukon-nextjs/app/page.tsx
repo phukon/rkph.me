@@ -73,7 +73,7 @@ export default async function Home() {
             </Link>
           </li>
         </ul>
-        <IframeEmbed src="https://open.spotify.com/embed/track/3wtV2ifnHzirkAElgTGh63?utm_source=generator" />
+        {/* <IframeEmbed src="https://open.spotify.com/embed/track/3wtV2ifnHzirkAElgTGh63?utm_source=generator" /> */}
       </div>
 
       <div
