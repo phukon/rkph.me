@@ -28,7 +28,7 @@ const LinkPreview: React.FC<LinkPreviewProps> = ({
           height={400}
           src={imageUrl}
           alt="OG Image"
-          className="rounded w-full object-cover aspect-video"
+          className="rounded w-full object-cover aspect-video no-prose-style"
         />
       </div>
 

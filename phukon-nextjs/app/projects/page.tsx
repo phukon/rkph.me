@@ -21,7 +21,7 @@ export default function Blog() {
         <div className="flex flex-col gap-8">
           <div>
             <h1 className="animate-in text-3xl font-bold tracking-tight">
-              Portfolio
+              Ship fast, ship often!
             </h1>
             <p
               className="animate-in text-secondary"

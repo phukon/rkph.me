@@ -193,9 +193,15 @@ input:-webkit-autofill:focus {
   @apply border-primary;
 }
 
-.prose.project img {
+/* This is to fix the issue of the LinkPreview image getting out of proportions on the Project's page. */
+.prose.project img:not(.no-prose-style) {
   @apply max-w-none rounded-md border border-secondary bg-tertiary md:rounded-lg lg:-ml-16 lg:w-[calc(100%+128px)];
 }
+
+.no-prose-style img {
+  @apply max-w-none rounded-md border border-secondary bg-tertiary md:rounded-lg lg:-ml-16 lg:w-full;
+}
+/* ---------------------- */
 
 .prose blockquote {
   @apply border-l-2 border-primary font-serif text-lg font-light;
@@ -271,6 +277,6 @@ pre[class*="language-"] {
   text-align: right;
   margin-right: 24px;
   margin-left: -8px;
-  color: var(--gray-8);/* Line number color */
+  color: var(--gray-8); /* Line number color */
   content: attr(line);
 }
