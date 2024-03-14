@@ -7,7 +7,7 @@ import clsx from "clsx";
 import localFont from "next/font/local";
 
 import lirmen from "public/gallery/lirmen-nagaland.jpg";
-import meJanlem from "public/gallery/me-janlem.jpg";
+import me from "public/gallery/me.jpg";
 import iitghy from "public/gallery/iitghy.jpg";
 import nr from "public/gallery/nishi-riki.jpg";
 
@@ -141,9 +141,9 @@ export default function Gallery() {
     <>
       <section className="relative flex h-[268px] gap-4">
         <Photo
-          src={meJanlem}
-          meta="2022-04-03"
-          alt="Riki and Janlem"
+          src={me}
+          meta="2022-08-30"
+          alt="Me"
           width={324}
           height={239}
           rotate={-6}

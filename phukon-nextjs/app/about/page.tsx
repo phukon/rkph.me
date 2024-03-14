@@ -7,9 +7,9 @@ import ConnectLinks from "../../components/ConnectLinks";
 // import Workplaces from "./components/Workplaces";
 import Gallery from "./components/Gallery";
 // import me from "public/gallery/me.jpg"
-import meJanlem from "public/gallery/me-janlem.jpg";
+import me from "public/gallery/me.jpg";
 // import iitghy from "public/gallery/iitghy.jpg";
-import nr from "public/gallery/nishi-riki.jpg"
+import nr from "public/gallery/nishi-riki.jpg";
 
 export const metadata: Metadata = {
   title: "About | Riki Phukon",
@@ -37,9 +37,9 @@ export default function About() {
           style={{ "--index": 1 } as React.CSSProperties}
         >
           <Image
-            src={meJanlem}
+            src={me}
             alt={"Riki and Janlem"}
-            width={220}
+            width={240}
             height={260}
             className="pointer-events-none relative inset-0 -top-2 h-60 -rotate-6 rounded-2xl bg-gray-400 object-cover shadow-md"
             priority
@@ -84,8 +84,8 @@ export default function About() {
               about computers, life, etc.
             </p>
             <p>
-              When I&apos;m not at my desk I am probably lifting weights,
-              practicing my punches, or at the mountains:)
+              When I&apos;m not at my desk I am probably lifting weights, or at
+              the mountains:)
             </p>
           </div>
         </Section>
@@ -94,8 +94,11 @@ export default function About() {
           <div className="flex w-full flex-col gap-8">
             <p>
               Have a question or just want to chat? Feel free to{" "}
-              <Link href="https://twitter.com/messages/compose?recipient_id=3151761882&text=hiiii%20Riki">text me</Link>.
-               {/* Try
+              <Link href="https://twitter.com/messages/compose?recipient_id=3151761882&text=hiiii%20Riki">
+                text me
+              </Link>
+              .
+              {/* Try
               finding me anywhere else at @kungfukon. */}
             </p>
             <ul className="animated-list grid flex-grow grid-cols-1 gap-2 md:grid-cols-2">
