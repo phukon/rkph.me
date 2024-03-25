@@ -7,20 +7,13 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: [
+      "api.producthunt.com",
       "github.githubassets.com",
       "styles.redditmedia.com",
       "user-images.githubusercontent.com",
       "upload.wikimedia.org",
       "github.com",
-      "tailwindui.com",
-      "images.unsplash.com",
-      "cdn.dribbble.com",
-      "m.media-amazon.com",
-      "ik.imagekit.io",
-      "miro.medium.com",
-      "store.storeimages.cdn-apple.com",
-      "www.apple.com",
-      "i.ytimg.com",
+      "d1g2o751bxy91o.cloudfront.net"
     ],
   },
 };

@@ -4,10 +4,15 @@ time: "2024"
 description: "Simplify PGP key🔑 setup and signing commits on Linux and Windows."
 url: "https://www.npmjs.com/package/gitkeykit"
 tags: ["gnupg", "git", "Javascript", "Node.js", "CLI"]
-index: 1
+index: 2
 ---
 
-<Image width={600} height={400} src="/projects/gitkeykit/image.png" caption="Simplify PGP key setup and signing commits on Linux and Windows."/>
+<Image
+  width={600}
+  height={400}
+  src="/projects/gitkeykit/image.png"
+  caption="Simplify PGP key setup and signing commits on Linux and Windows."
+/>
 
 Real engineers sign every commit before pushing it to GitHub. But setting up GPG and Git configs on different machines can be cumbersome.
 
@@ -31,21 +36,23 @@ Just run `npx gitkeykit` and enjoy:
 ## 📦 Usage
 
 ```bash
-npx gitkeykit 
-```
-or
-```bash
-npm install -g gitkeykit 
+npx gitkeykit
 ```
 
+or
+
+```bash
+npm install -g gitkeykit
+```
 
 #### Options:
-  `--reset` Reset Git and GPG configurations
+
+`--reset` Reset Git and GPG configurations
 
 #### Commands:
-  `import <key_path.txt>`    Import and set configuration with the provided PGP key
+
+`import <key_path.txt>` Import and set configuration with the provided PGP key
 
 Examples:
-  `gitkeykit import my_key.txt`    Import and set configuration with 'my_key.txt'
-  `gitkeykit --reset`             Reset all configurations` 
-
+`gitkeykit import my_key.txt` Import and set configuration with 'my_key.txt'
+`gitkeykit --reset` Reset all configurations`
