@@ -37,6 +37,21 @@ Click on a Story and you get a good overview of the component along with it’s 
 
 Congrats! You’ve just setup **Storybook** for your project. **BUT** you need to jazz it up by properly plugging in TailwindCSS. (cuz who doesn’t TailwindCSS?)
 
+## Setup Absolute Imports
+Storybook doesn’t support absolute imports out of the box. For this we have to do a minor change in the config. Open .storybook/main.ts and add this snippet in the config object.
+
+```javascript
+webpackFinal: async (config) => {
+    if (config.resolve) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        "@": path.resolve(__dirname, "../"),
+      };
+    }
+    return config;
+  }
+```
+
 ## Setup Tailwind!
 Unless you’ve been living in a cave (or under a rock, if you prefer), you probably know how crucial TailwindCSS is in the modern web dev scene. But the TailwindCSS utility classes won’t work with **Storybook** out of the box.
 
