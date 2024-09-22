@@ -13,7 +13,9 @@ const nextConfig = {
       "user-images.githubusercontent.com",
       "upload.wikimedia.org",
       "github.com",
-      "d1g2o751bxy91o.cloudfront.net"
+      "d1g2o751bxy91o.cloudfront.net",
+      "img.notionusercontent.com",
+      "encrypted-tbn0.gstatic.com",
     ],
   },
 };
