@@ -133,13 +133,13 @@ export default function About() {
           </div>
         </Section>
 
-        <Section heading="Work" headingAlignment="left">
-          <div className="flex w-full flex-col gap-8">
+        {/* <Section heading="Work" headingAlignment="left">
+          <div className="flex w-full flex-col gap-8"> */}
             {/* <p>
               {new Date().getFullYear() - 2022}+ years of professional
               development experience.
             </p> */}
-            <p>
+            {/* <p>
               Electronics engineer turned software developer.
               <br/> I began my journey
               by freelancing, building simple WordPress websites, creating and
@@ -148,53 +148,53 @@ export default function About() {
             </p>
             <Workplaces items={workplaces} />
           </div>
-        </Section>
+        </Section> */}
       </div>
     </div>
   );
 }
 
-const workplaces = [
-  {
-    title: "SDE Intern (GenAI + Fullstack)",
-    desc: "Building AI agents for product analytics event instrumentation.",
-    company: "Iterate AI",
-    time: "May 2024 - Present",
-    imageSrc: Iterate,
-    link: "https://iterate-ai.com/",
-  },
-  {
-    title: "Indie Hacker",
-    desc: "Shipping fast and building in public.",
-    company: "",
-    time: "Nov 2023 - Present",
-    imageSrc: Avatar,
-    link: "https://www.producthunt.com/@kungfukon",
-  },
-  {
-    title: "Full Stack Dev",
-    desc: "My first attempt at building a social platform for creatives.",
-    company: "Xongroh",
-    time: "June 2023 - Nov 2023",
-    imageSrc: Xongroh,
-    link: "https://xongroh.com",
-  },
-  {
-    title: "Engineering Intern",
-    desc: "OFDM simulation and Implementation of Diversity Receivers on FPGA.",
-    company: "Indian Institute of Technology, Guwahati",
-    time: "Aug 2022 - Sept 2022",
-    imageSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh6Rt7OqGgb38tZFd5CJqUoGp_dBH_qwD3RA&s",
-    link: "https://drive.google.com/file/d/1I2nJ8W_4w7DrIgHSQYOQ6K4PXY_4H7cJ/view",
-  },
-  {
-    title: "Engineering Intern ",
-    desc: "Work involved solving problems relating to the fibre optic network of Jorhat district.",
-    company: "Bharat Sanchar Nigam Limited",
-    time: "Aug 2021 - Sept 2021",
-    imageSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI-_qjH4BsZ3CL166KSgRUv-N6qIiUDxlrVw&s",
-    link: "https://bsnl.co.in/",
-  },
-];
+// const workplaces = [
+//   {
+//     title: "SDE Intern (GenAI + Fullstack)",
+//     desc: "Building AI agents for product analytics event instrumentation.",
+//     company: "Iterate AI",
+//     time: "May 2024 - Present",
+//     imageSrc: Iterate,
+//     link: "https://iterate-ai.com/",
+//   },
+//   {
+//     title: "Indie Hacker",
+//     desc: "Shipping fast and building in public.",
+//     company: "",
+//     time: "Nov 2023 - Present",
+//     imageSrc: Avatar,
+//     link: "https://www.producthunt.com/@kungfukon",
+//   },
+//   {
+//     title: "Full Stack Dev",
+//     desc: "My first attempt at building a social platform for creatives.",
+//     company: "Xongroh",
+//     time: "June 2023 - Nov 2023",
+//     imageSrc: Xongroh,
+//     link: "https://xongroh.com",
+//   },
+//   {
+//     title: "Engineering Intern",
+//     desc: "OFDM simulation and Implementation of Diversity Receivers on FPGA.",
+//     company: "Indian Institute of Technology, Guwahati",
+//     time: "Aug 2022 - Sept 2022",
+//     imageSrc:
+//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh6Rt7OqGgb38tZFd5CJqUoGp_dBH_qwD3RA&s",
+//     link: "https://drive.google.com/file/d/1I2nJ8W_4w7DrIgHSQYOQ6K4PXY_4H7cJ/view",
+//   },
+//   {
+//     title: "Engineering Intern ",
+//     desc: "Work involved solving problems relating to the fibre optic network of Jorhat district.",
+//     company: "Bharat Sanchar Nigam Limited",
+//     time: "Aug 2021 - Sept 2021",
+//     imageSrc:
+//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI-_qjH4BsZ3CL166KSgRUv-N6qIiUDxlrVw&s",
+//     link: "https://bsnl.co.in/",
+//   },
+// ];
