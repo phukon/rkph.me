@@ -19,12 +19,12 @@ export default function Blog() {
     <div className="flex flex-col gap-16 md:gap-24">
       <div className="flex flex-col gap-8">
         <div>
-          <h1 className="animate-in text-3xl font-bold tracking-tight">Musings</h1>
+          <h1 className="animate-in text-3xl font-bold tracking-tight">The Fafo blog</h1>
           <p
             className="animate-in text-secondary"
             style={{ "--index": 1 } as React.CSSProperties}
           >
-            {posts.length} posts about code, design, more ...
+            {posts.length} posts about engineering, design, life and more ...
           </p>
         </div>
       </div>

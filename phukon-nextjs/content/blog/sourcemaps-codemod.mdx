@@ -1,0 +1,139 @@
+---
+title: "Babel and Sourcemaps, Part-1"
+publishedAt: "2024-10-13"
+summary: "Repurposing source-maps with a Babel codemod."
+tags: ["sourcemaps", "abstract syntax tree", "javascript", "babel"]
+
+shortTitle: "Babel and Sourcemaps, Part-1"
+coverImageOnPage: true
+---
+
+
+# Babel and sourcemaps
+
+I began working with sourcemaps a while ago and was fascinated by their ingenuity. This sparked an idea: what if sourcemaps could be used for other purposes? Specifically, I thought of applying them to documentation — comments, README files, and so on.
+
+That’s how [‘DOCMAP’](https://github.com/phukon/docmap) was born! The process works by adding comments in the source code with a specific prefix. Then, Babel is run on the source code, stripping out the comments from the original files without modifying the JavaScript/TypeScript/JSX/TSX code itself. These comments are compiled into a single README file, and a sourcemap is generated for the comments!
+
+This will keep all the juicy comments right where they belong, pinpointing them to the relevant code without cluttering up the original source
+
+## A Primer
+### Babel
+JavaScript is an evolving language, with new features and syntax being introduced regularly. However, not all browsers and environments immediately support the latest JavaScript features. This can create compatibility issues for developers who want to use modern language features while ensuring their code runs smoothly across all platforms. This is where transpiling comes in.
+
+Transpilers help bridge this gap by converting modern JavaScript code into older versions that are widely supported across different browsers. One popular transpiler is Babel, which not only allows developers to transpile code but also to create and run code mods—automated transformations of code.
+
+### Sourcemaps
+Now that we understand what Babel is and what it can do, let's address a common issue.
+
+When debugging compiled code in the browser’s debugger, problems can arise. The code running in the browser isn’t the code you originally wrote, making it difficult to follow and debug.
+
+Source maps offer a solution to this. They map the compiled code back to your original source code, allowing the debugger to display the code you wrote while still running the compiled version behind the scenes.
+
+### But what does a sourcemap look like?
+
+If we compile this ES 2015 code with Babel:
+
+```javascript
+const square = (x) => x * x;
+```
+
+It is transformed into this:
+
+```javascript
+"use strict";
+
+var square = function square(x) {
+  return x * x;
+};
+
+//# sourceMappingURL=test.js.map
+```
+
+And this is the source map content inside “test.js.map”:
+
+```javascript
+{
+    "version": 3,
+    "sources": ["test.es6.js"],
+    "names": [],
+    "mappings": ";;AAAA,IAAM,MAAM,GAAG,SAAT,MAAM,CAAI,CAAC;SAAK,CAAC,GAAG,CAAC;CAAA,CAAC",
+    "file": "test.js",
+    "sourcesContent": ["const square = (x) => x * x;"]
+}
+```
+
+**What are those weird alphabets in the mappings key?**
+These are called Base 64 VLQ. VLQ stands for [variable-length quantity](https://en.wikipedia.org/wiki/Variable-length_quantity), and it’s used to store a number in a more space-efficient way than storing its digits as a string.
+
+The individual mapping entries, such as "AAAA" and "GAAG," are known as "segments." Each segment represents an array of numbers.
+
+<Image width={600} height={400} src="/blog/sourcemaps-codemod/base64_vlq.png" caption="Base 64 Variable Length Quantity Encoding"/>
+
+
+ In the sourcemap world. Everything is zero indexed (lines and columns)
+ A semicolon (;) means skip to next line in the output file.
+
+- _[0]_: Column index in the compiled file
+- _[1]_: What original source file the location in the compiled source maps to
+- _[2]_: Row index in the original source file (i.e. the number of lines to move from the current position)
+- _[3]_: Column index in the original source file
+
+Source maps do not represent the position of every character; instead, they use relative values to indicate the proximity of source code locations.
+
+For example, if a column value is decoded to 8 and the next segment's column value is 10, the mapping indicates a change of +10 (rather than an absolute position of 10). We have to move 10 lines from the previous segment's decoded position in the original code. Therefore, each segment's current VLQ value depends on and is derived from its predecessors.
+
+This relative approach is especially useful when working with large codebases, as it keeps the source map concise while still enabling accurate debugging.
+
+## The code mod
+
+How does the codemod script work?
+
+1. **Parse Code to AST**:
+    - The source code is tokenized and analyzed to create an **Abstract Syntax Tree (AST)**, a structured representation of the code.
+
+1. **Transform AST to Another AST**:
+    - The AST is optimized or transformed through semantic analysis (e.g., type checking, optimizations like dead code elimination) to improve efficiency. But in our case, we are removing comment nodes from the code.
+
+1. **Generate Code from AST**:
+    - The optimized AST is translated into the target code (e.g., machine code or bytecode) that can be executed. In our case, we are translate the AST without the comment nodes into code.
+
+In short: **Parse → Transform → Generate**.
+
+When working with Babel, you generally **add nodes to paths** rather than directly to nodes. What’s a node and a path in the Babel AST you might ask?
+
+- **Nodes:** These represent the actual elements of the Abstract Syntax Tree (AST). For example, a variable declaration, function call, or any other part of the code is a node. However, nodes are just data structures; they don’t know their position or context within the AST.
+- **Paths:** A `NodePath` is a wrapper around a node that includes information about its position in the AST and the scope it belongs to. Paths provide methods for navigating and manipulating the AST, such as `insertBefore`, `insertAfter`, `replaceWith`, and more.
+
+<Image width={600} height={400} src="/blog/sourcemaps-codemod/ast.png" caption="A simple abstract syntax tree"/>
+
+### Note
+We use the **visitor pattern** while using babel for transformations. A visitor matches a node in the AST and returns a **path!** This path wraps the node (ex: `CallExpression`) and provides methods to interact with it.
+
+**What the Path Object Provides:**
+
+1. **Node Access**: You can access the actual AST node via `path.node`.
+2. **Parent Node**: Access the parent node via `path.parent`.
+3. **Sibling Nodes**: Navigate to sibling nodes via methods like `path.getSibling(index)`.
+4. **Node Replacement**: Replace the current node with `path.replaceWith(newNode)`.
+5. **Traversal**: Traverse into child nodes using `path.traverse()` with another visitor.
+6. **Contextual Information**: The path includes context about the scope, which can be important for variable declarations, function parameters, etc.
+
+
+So, that wraps up **Part 1**! We’ve explored how **Babel** lets us use modern JavaScript features while making sure our code runs smoothly across different browsers. We also talked about **sourcemaps** and how they help us debug by linking the compiled code back to the original source, which is super handy.
+
+Plus, we introduced the idea of **DOCMAP**, a cool way to repurpose sourcemaps for documentation. It keeps those juicy comments tied to the right code without cluttering things up.
+
+In **Part 2**, we’ll dive into how DOCMAP works, showing you the steps for extracting comments and generating a neat README. Can’t wait to get into it!
+
+---
+
+### Resources
+
+- About sourcemaps: [https://pvdz.ee/weblog/281](https://pvdz.ee/weblog/281)
+- Base64 VLQ decoder: [http://www.murzwin.com/base64vlq.html](http://www.murzwin.com/base64vlq.html)
+- Good read: [https://www.linkedin.com/pulse/reconstructing-javascript-source-code-from-maps-schaffner-bofill/](https://www.linkedin.com/pulse/reconstructing-javascript-source-code-from-maps-schaffner-bofill/)
+- Generating source maps: [https://www.mattzeunert.com/2016/02/14/how-do-source-maps-work.html](https://www.mattzeunert.com/2016/02/14/how-do-source-maps-work.html)
+- VLQ npm package documentation: [https://www.npmjs.com/package/vlq](https://www.npmjs.com/package/vlq)
+- Sentry’s Video on sourcemaps: [https://www.youtube.com/watch?v=6LI0BJIiamg](https://www.youtube.com/watch?v=6LI0BJIiamg)
+- AST Explorer: [https://astexplorer.net](https://astexplorer.net)
